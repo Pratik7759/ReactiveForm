@@ -1,0 +1,35 @@
+<body>
+  <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="title">Welcome</div>
+    <div class="subtitle">Let's create your account!</div>
+    <div class="input-container ic1">
+      <!-- <label for="name">Name</label> -->
+      <input type="text" class="input" placeholder="Enter Name" formControlName="name" />
+    </div>
+    <div class="input-container ic2">
+      <!-- <label for="email">Email</label> -->
+      <input type="email" class="input" placeholder="Enter Email" formControlName="email" />
+    </div>
+    <div class="input-container ic3">
+      <!-- <label for="age">Age</label> -->
+      <input type="number" class="input" placeholder="Enter Age" formControlName="age" />
+    </div>
+    <div class="input-container ic4">
+      <!-- <label for="contact">Contact No</label> -->
+      <input
+        type="number"
+        placeholder="Enter Contact No"
+        formControlName="contact"
+        class="input"
+      />
+    </div>
+    <div class="input-container ic5">
+    <!-- <label for="place">Place</label> -->
+    <input type="text" class="input" placeholder="Enter Place" formControlName="place" />
+    </div>
+    <button type="submit" class="submit" [disabled]="!myForm.valid">Submit</button>
+
+    <!-- {{name.value}} -->
+    <!-- <p>Form Status: {{ myForm.status }}</p> -->
+  </form>
+</body>
